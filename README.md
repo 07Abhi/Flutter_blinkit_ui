@@ -14,3 +14,9 @@ A few resources to get you started if this is your first Flutter project:
 For help getting started with Flutter development, view the
 [online documentation](https://docs.flutter.dev/), which offers tutorials,
 samples, guidance on mobile development, and a full API reference.
+
+1. I have implemented the home page UI.
+2. I have implemented Floating action button for Category.
+3. Address Listing and change address from that listing
+4. Created Profile Section.
+5. Managed the application state by using Providers.
