@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 import '../widgets/category_widget.dart';
+import '../widgets/deals_of_the_day_widget.dart';
 import '../widgets/home_fab_button.dart';
 import '../widgets/home_header_widget.dart';
 import '../widgets/home_seach_widget.dart';
@@ -89,6 +90,14 @@ class _HomeScreenState extends State<HomeScreen> {
                       itemsData: provider.masterData?.moreToExplore?.itemsData,
                     ),
                   ],
+                  if (provider.masterData?.dealsOfTheDay?.itemsData != null &&
+                      provider.masterData?.dealsOfTheDay?.itemsData?.isNotEmpty == true) ...[
+                    const SizedBox(height: 20.0),
+                    DealsOfTheDayWidget(
+                      title: provider.masterData?.dealsOfTheDay?.title,
+                      itemsData: provider.masterData?.dealsOfTheDay?.itemsData,
+                    )
+                  ],
                   _categorySection(insideContext),
                   const SizedBox(height: 50.0),
                 ],
@@ -136,6 +145,7 @@ class _HomeScreenState extends State<HomeScreen> {
             itemsData: provider.masterData?.householdEssentials?.itemsData,
           ),
         ],
+        const SizedBox(height: 40.0),
         const SizedBox(height: 50.0),
       ],
     );
